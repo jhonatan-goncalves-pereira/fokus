@@ -17,7 +17,7 @@ const audioPlay = new Audio("assets/sounds/play.wav");
 const audioPause = new Audio("assets/sounds/pause.mp3");
 const audioTempoFinalizado = new Audio("assets/sounds/beep.mp3");
 
-let tempoDecorridoEmSegundos = 5;
+let tempoDecorridoEmSegundos = 1500;
 let intervaloId = null;
 
 musica.loop = true
@@ -32,21 +32,25 @@ musicaFocoInput.addEventListener("change", function(){
 });
 
 focoBt.addEventListener("click", function(){
-   alterarContexto("foco");
+    alterarContexto("foco");
+    tempoDecorridoEmSegundos = 1500;
     focoBt.classList.add("active");
 });
 
 curtoBt.addEventListener("click", function(){
-   alterarContexto("descanso-curto");
-   curtoBt.classList.add("active");
+    tempoDecorridoEmSegundos = 300;
+    alterarContexto("descanso-curto");
+    curtoBt.classList.add("active");
 });
 
 longoBt.addEventListener("click", function(){
-   alterarContexto("descanso-longo");
-   longoBt.classList.add("active");
+    tempoDecorridoEmSegundos = 900;
+    alterarContexto("descanso-longo");
+    longoBt.classList.add("active");
 });
 
 function alterarContexto(contexto){
+    mostrarTempo();
     botoes.forEach(function (contexto){
         contexto.classList.remove('active')
     })
@@ -77,7 +81,6 @@ const contagemRegressiva = () =>{
         return
     }else{
         tempoDecorridoEmSegundos -= 1;
-        console.log("Temporarizador:" + tempoDecorridoEmSegundos);
         mostrarTempo();
     }
 }
@@ -102,6 +105,9 @@ function zerar(){
 }
 
 function mostrarTempo(){
-    const tempo = tempoDecorridoEmSegundos;
-    tempoNaTela.innerHTML = `${tempo}`;
+    const tempo = new Date(tempoDecorridoEmSegundos * 1000);
+    const tempoFormatado = tempo.toLocaleTimeString("pt-Br", {minute: '2-digit', second: '2-digit'});
+    tempoNaTela.innerHTML = `${tempoFormatado}`;
 }
+
+mostrarTempo();
