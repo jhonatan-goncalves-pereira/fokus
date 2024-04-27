@@ -6,7 +6,7 @@
 Fokus é um aplicativo web simples e eficaz para ajudá-lo a manter o foco e aumentar sua produtividade. Combinando técnicas de pomodoro com música relaxante, o Fokus ajuda você a mergulhar no que importa e fazer pausas curtas ou longas quando necessário.
 
 
-[ACESSE](https://github.com/jhonatan-goncalves-pereira/fokus)
+[ACESSE](https://jhonatan-goncalves-pereira.github.io/fokus/)
 
 ## Funcionalidades
 
