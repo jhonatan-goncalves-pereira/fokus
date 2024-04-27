@@ -51,4 +51,4 @@ Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licens
 
 ---
 
-**Desenvolvido por:** [Seu Nome](https://www.linkedin.com/in/jhonatan-goncalves-pereira/) | **Deploy:** [Link do Deploy](https://jhonatan-goncalves-pereira.github.io/fokus/)
+**Desenvolvido por:** [Jhonatan Gonçalves Pereira](https://www.linkedin.com/in/jhonatan-goncalves-pereira/) | **Deploy:** [Link do Deploy](https://jhonatan-goncalves-pereira.github.io/fokus/)
