@@ -55,7 +55,7 @@ function alterarContexto(contexto){
         contexto.classList.remove('active')
     })
     html.setAttribute("data-contexto", contexto);
-    banner.setAttribute("src", `/assets/images/${contexto}.png`);
+    banner.setAttribute("src", `assets/images/${contexto}.png`);
     switch(contexto){
         case contexto = "foco":
             titulo.innerHTML = `Otimize sua produtividade,<br>
